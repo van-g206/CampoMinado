@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000c7;
+    background-image: url("https://i.pinimg.com/originals/08/2b/a5/082ba51259bc88a97246a7481875f0d6.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 121, 240, 0.288);
+    z-index: -1; 
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+#tentativas {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+.pet img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+#Texto {
+    font-family: 'Pacifico', cursive;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%; /* Ajuste dinâmico */
+    max-width: 400px; /* Limite máximo para telas grandes */
+    border: solid 3px;
+    border-radius: 10px;
+    animation: border-pulse 2s infinite;
+}
+
+td {
+    width: 10%;
+    height: 10vw; /* Ajusta com base no tamanho da tela */
+    max-height: 40px; /* Limite para telas maiores */
+    border: 2px solid #000000;
+    text-align: center;
+    background-color: #091ee03b;
+}
+
+td:hover {
+    background-color: #06f5fdbb;
+    cursor: pointer;
+}
+
+/* Consultas de mídia para telas pequenas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    #Texto {
+        font-size: 0.9rem;
+    }
+
+    table {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    td {
+        height: 12vw;
+    }
+
+    .pet img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1rem;
+    }
+
+    #Texto {
+        font-size: 0.8rem;
+    }
+
+    table {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    td {
+        height: 15vw;
+    }
+
+    .pet img {
+        width: 80px;
+        height: 80px;
+    }
+}
